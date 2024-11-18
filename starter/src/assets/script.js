@@ -67,18 +67,26 @@ const cart = [];
   - if the product is not already in the cart, add it to the cart
 */
 
-function addProductToCart(productId) {
-
-    let product = products.find(product => product.productId === productId);
-    product.quantity += 1;
-
-    if (!cart.includes(product)) {
-
-
-      cart.push(product);
-    }
+//Helper function
+//find() method is finding the first item that matches and then returning it
+//productList will take either products object or cart array 
+function findProduct(productId, productList){
+  return productList.find(function(product) {
+    return product.productId === productId
+  });
 }
 
+function addProductToCart(productId) {
+
+//Find matching Ids of the productId and oject array products with helper function
+  let product = findProduct(productId, products)
+
+  //if cart does not include product, the product is being pushed to the cart array
+  if (!cart.includes(product)) {
+    cart.push(product)
+  }
+  increaseQuantity(productId)
+}
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
@@ -86,9 +94,10 @@ function addProductToCart(productId) {
 */
 
 function increaseQuantity(productId) {
-
-  const product = products.find((product) => product.productId === productId);
-  ++product.quantity;
+  
+  //increasing quantity of product in the cart
+  let product = findProduct(productId, cart)
+  product.quantity = product.quantity + 1;
 }
 
 /* Create a function named decreaseQuantity that takes in the productId as an argument
@@ -99,12 +108,12 @@ function increaseQuantity(productId) {
 
 function decreaseQuantity(productId) {
 
-  const product = products.find((product) => product.productId === productId);
-  --product.quantity;
-
+  //reduces the quantity of product in the cart
+  let product = findProduct(productId, cart)
+  product.quantity = product.quantity - 1;
   if (product.quantity === 0) {
-    removeProductFromCart(productId);
-
+    product.quantity = 0
+    cart.splice(product.name, 1)
   }
 }
 
@@ -116,14 +125,11 @@ function decreaseQuantity(productId) {
 
 function removeProductFromCart(productId) {
 
-  const index = cart.findIndex((product) => product.productId === productId);
+  //Completely removes item from the cart
+  let product = findProduct(productId, cart)
+  product.quantity = 0
+  cart.splice(product.name, 1)
 
-  if (index !== -1) {
-
-    cart[index].quantity = 0;
-
-    cart.splice(index, 1);
-  }
 }
 
 
@@ -137,6 +143,7 @@ function cartTotal(){
 
   let totalPrice = 0;
 
+  // calculating and returning the total price
   for (let i = 0; i < cart.length; i++) {
     totalPrice += cart[i].quantity * cart[i].price;
   }
@@ -161,10 +168,19 @@ function emptyCart() {
 let totalPaid = 0;
 
 function pay(amount) {
-  totalPaid += amount;
-  let remainingBalance = totalPaid - cartTotal();
-  return remainingBalance;
 
+  //Amount paid
+  totalPaid = totalPaid + amount;
+
+  //remainingBalance subtracts cartTotal from totalPaid
+  let remainingBalance = totalPaid - cartTotal();
+
+  //if remainingBalance is >= 0, the totalPaid resets to 0 to allow for additional payment
+  if (remainingBalance >= 0) {
+    totalPaid = 0;
+    emptyCart();
+  }
+    return remainingBalance;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
