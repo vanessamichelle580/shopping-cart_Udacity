@@ -147,11 +147,9 @@ function cartTotal(){
 
 /* Create a function called emptyCart that empties the products from the cart */
 
-  function emptyCart() {
-
-    cart = [];
-
-  }
+function emptyCart() {
+  cart.splice(0, cart.length);
+}
 
 
 /* Create a function named pay that takes in an amount as an argument
