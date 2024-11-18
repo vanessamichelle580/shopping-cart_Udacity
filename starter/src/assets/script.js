@@ -13,7 +13,7 @@ const products = [
   price: 3,
   quantity: 0,
   productId: 1,
-  image: 'starter\src\images\orange.jpg'
+  image: 'https://images.unsplash.com/photo-1586439702132-55ce0da661dd?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 },
 
 {
@@ -21,7 +21,7 @@ const products = [
   price: 2.50,
   quantity: 0,
   productId: 2,
-  image: 'starter\src\images\apple.jpg'
+  image: 'https://unsplash.com/photos/three-overlapping-honeycrisp-apples-uMjXPQRMm8A'
 },
 
 {
@@ -29,7 +29,7 @@ const products = [
   price: .85,
   quantity: 0,
   productId: 3,
-  image: 'starter\src\images\banana.jpg'
+  image: 'https://unsplash.com/photos/riped-banana-on-pink-surface-sf_1ZDA1YFw'
 },
 
 {
@@ -37,34 +37,25 @@ const products = [
   price: 4,
   quantity: 0,
   productId: 4,
-  image: 'starter\src\images\cherry.jpg' 
+  image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDl8fHxlbnwwfHx8fHw%3D' 
 },
 
 {
-  name: 'Strawberry',
+  name: 'Mango',
   price: 4.50,
   quantity: 0,
   productId: 5,
-  image: 'starter\src\images\strawberry.jpg'
+  image: 'https://unsplash.com/photos/wWEpM0QNK5E'
 },
 
 {
-  name: 'Raspberry',
-  price: 3.25,
+  name: 'Lime',
+  price: .50,
   quantity: 0,
   productId: 6,
-  image: 'starter\src\images\raspberry.jpg'
+  image: 'https://unsplash.com/photos/J5UkR-L-HB0'
 }
 ];
-
-/* Images provided in /images folder. All images from Unsplash.com
-   - cherry.jpg by Mae Mu
-   - orange.jpg by Mae Mu
-   - strawberry.jpg by Allec Gomes
-   - apple.jpg by Elena Koycheva
-   - banana.jpg by Tim Foster
-   - raspberry.jpg by Hamad Alahamad
-*/
 
 /* Declare an empty array named cart to hold the items in the cart */
 
