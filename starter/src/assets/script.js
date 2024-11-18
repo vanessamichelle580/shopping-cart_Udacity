@@ -21,7 +21,7 @@ const products = [
   price: 2.50,
   quantity: 0,
   productId: 2,
-  image: 'https://unsplash.com/photos/three-overlapping-honeycrisp-apples-uMjXPQRMm8A'
+  image: 'https://images.unsplash.com/photo-1535622380377-1e347c44a12d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 },
 
 {
@@ -29,7 +29,7 @@ const products = [
   price: .85,
   quantity: 0,
   productId: 3,
-  image: 'https://unsplash.com/photos/riped-banana-on-pink-surface-sf_1ZDA1YFw'
+  image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 },
 
 {
@@ -45,7 +45,7 @@ const products = [
   price: 4.50,
   quantity: 0,
   productId: 5,
-  image: 'https://unsplash.com/photos/wWEpM0QNK5E'
+  image: 'https://images.unsplash.com/photo-1481349758547-36a0382e3394?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 },
 
 {
@@ -53,7 +53,7 @@ const products = [
   price: .50,
   quantity: 0,
   productId: 6,
-  image: 'https://unsplash.com/photos/J5UkR-L-HB0'
+  image: 'https://images.unsplash.com/photo-1481349865562-09ea3814bc40?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 }
 ];
 
