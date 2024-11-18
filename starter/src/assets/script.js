@@ -123,13 +123,45 @@ function decreaseQuantity(productId) {
   - removeProductFromCart should remove the product from the cart
 */
 
+function removeProductFromCart(productId) {
+
+  const index = cart.findIndex((product) => product.productId === productId);
+
+  if (index !== -1) {
+
+    cart[index].quantity = 0;
+
+    cart.splice(index, 1);
+  }
+}
+
+
 /* Create a function named cartTotal that has no parameters
   - cartTotal should iterate through the cart to get the total cost of all products
   - cartTotal should return the total cost of the products in the cart
   Hint: price and quantity can be used to determine total cost
 */
 
+function cartTotal(){
+
+  let totalPrice = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    totalPrice += cart[i].quantity * cart[i].price;
+  }
+
+  return totalPrice;
+
+}
+
 /* Create a function called emptyCart that empties the products from the cart */
+
+  function emptyCart() {
+
+    cart = [];
+
+  }
+
 
 /* Create a function named pay that takes in an amount as an argument
   - amount is the money paid by customer
@@ -137,6 +169,14 @@ function decreaseQuantity(productId) {
   - pay will return a positive number if money should be returned to customer
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
+let totalPaid = 0;
+
+function pay(amount) {
+  totalPaid += amount;
+  let remainingBalance = totalPaid - cartTotal();
+  return remainingBalance;
+
+}
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
