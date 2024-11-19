@@ -165,12 +165,14 @@ function emptyCart() {
   - pay will return a positive number if money should be returned to customer
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
+
+//Variable to be used to track total payments
 let totalPaid = 0;
 
 function pay(amount) {
 
   //Amount paid
-  totalPaid = totalPaid + amount;
+  totalPaid += amount;
 
   //remainingBalance subtracts cartTotal from totalPaid
   let remainingBalance = totalPaid - cartTotal();
